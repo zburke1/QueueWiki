@@ -1,26 +1,15 @@
 'use strict';
 
+/**
+ * Module dependencies.
+ */
 var mongoose = require('mongoose'),
-		Schema = mongoose.Schema;
+	Schema = mongoose.Schema;
 
-var ArticleSchema = new Schema({ // Article == Problem to lifehack, an instance of a page to visit
-  header: {
-    type: Schema.ObjectId,
-    ref: 'Header'
-  },
-  
-	history: {
-    type: Schema.ObjectId,
-    ref: 'History'
-  },
-	
-	
-	
-	
-	
-	
-	
-///////MEAN.js stuff follows VVVV	
+/**
+ * Article Schema
+ */
+var ArticleSchema = new Schema({
 	created: {
 		type: Date,
 		default: Date.now
