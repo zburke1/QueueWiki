@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://databaseUser:QWiki1@ds041593.mongolab.com:41593/qwiki',
 	app: {
-		title: 'Lifehack Wiki - Development Environment'
+		title: 'QWiki - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

@@ -2,7 +2,7 @@
 
 module.exports = {
 	app: {
-		title: 'Lifehack Wiki',
+		title: 'QWiki',
 		description: 'Searchable wiki of lifehacks',
 		keywords: 'MongoDB, Express, AngularJS, Node.js'
 	},

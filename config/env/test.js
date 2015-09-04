@@ -4,7 +4,7 @@ module.exports = {
 	db: 'mongodb://localhost/lifehack-wiki-test',
 	port: 3001,
 	app: {
-		title: 'Lifehack Wiki - Test Environment'
+		title: 'QWiki - Test Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
