@@ -1,14 +1,53 @@
-<section data-ng-controller="ArticlesController">
+<section class="qwiki-solution" data-ng-controller="ArticlesController">
 	<div class="page-header">
 		<h1>New Article</h1>
 	</div>
-	<div class="col-md-12">
+	<div class="create">
 		<form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
 			<fieldset>
 				<div class="form-group" ng-class="{ 'has-error': articleForm.title.$dirty && articleForm.title.$invalid }">
 					<label class="control-label" for="title">Title</label>
 					<div class="controls">
 						<input name="title" type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="category">Category</label>
+					<div class="controls">
+						<select name="category" data-ng-model="category" id="category" class="form-control" ng-options="category for category in categories"></select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="tags">Tags</label>
+					<div class="controls">
+						<input name="tags" type="text" id="tags" class="form-control" placeholder="Tags" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Required</label>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="materials">Materials</label>
+					<div name="materials" class="controls" id="materials" data-ng-repeat="material in materials">
+						<input type="text" class="form-control" data-ng-model="material.name" data-ng-change="addMaterial()" placeholder="Item" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="cost">Cost</label>
+					<div class="controls">
+						<input name="cost" type="text" id="cost" class="form-control" placeholder="Cost" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="time">Time</label>
+					<div class="controls">
+						<input name="time" type="text" id="time" class="form-control" placeholder="Time" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="skills">Skills</label>
+					<div class="controls">
+						<input name="skills" type="text" id="skills" class="form-control" placeholder="Skills" required>
 					</div>
 				</div>
 				<div class="form-group">

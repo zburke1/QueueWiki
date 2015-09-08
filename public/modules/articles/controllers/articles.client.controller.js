@@ -2,7 +2,36 @@
 
 angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
 	function($scope, $stateParams, $location, Authentication, Articles) {
+		
+		/* QWiki solution $scope Variables */
 		$scope.authentication = Authentication;
+		$scope.categories = ['Cooking', 'Sports', 'Technology'];
+		$scope.materials = [];
+
+		/* QWiki solution inital checks/functions */
+
+		// Make sure at least one element in materials array
+		if(!$scope.materials.length) {
+			$scope.materials.push({'name' : ''});
+		}
+
+		/* QWiki solution function defintions */
+
+		$scope.addMaterial = function() {
+			var last = $scope.materials.length - 1;
+			
+			if($scope.materials[last].name !== '') {
+				$scope.materials.push({'name' : ''});
+			}
+
+			if($scope.materials.length > 1) {
+				for(var i = 0; i < $scope.materials.length; i++) {
+					if($scope.materials[i].name === undefined) {
+						$scope.materials.splice(i,1);
+					}
+				}
+			}
+		};
 
 		$scope.create = function() {
 			var article = new Articles({
