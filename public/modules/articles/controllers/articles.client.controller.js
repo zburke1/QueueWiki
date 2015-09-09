@@ -20,10 +20,12 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		$scope.addMaterial = function() {
 			var last = $scope.materials.length - 1;
 			
+			// Add new text box when last text box has content
 			if($scope.materials[last].name !== '') {
 				$scope.materials.push({'name' : ''});
 			}
 
+			// Delete any text boxes that have had all content removed
 			if($scope.materials.length > 1) {
 				for(var i = 0; i < $scope.materials.length; i++) {
 					if($scope.materials[i].name === undefined) {
