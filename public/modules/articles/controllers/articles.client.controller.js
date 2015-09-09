@@ -12,7 +12,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 
 		// Make sure at least one element in materials array
 		if(!$scope.materials.length) {
-			$scope.materials.push({'name' : ''});
+			$scope.materials.push({name: ''});
 		}
 
 		/* QWiki solution function defintions */
@@ -22,7 +22,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 			
 			// Add new text box when last text box has content
 			if($scope.materials[last].name !== '') {
-				$scope.materials.push({'name' : ''});
+				$scope.materials.push({name: ''});
 			}
 
 			// Delete any text boxes that have had all content removed
